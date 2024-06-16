@@ -1,0 +1,21 @@
+// Include the Crow library
+#define CROW_MAIN
+#include "crow.h"
+
+int main() {
+    crow::SimpleApp app;
+
+    // Define the route for the root URL "/"
+    CROW_ROUTE(app, "/")([]() {
+        return "<html><body><h1>Hello, World!</h1><p>This is a simple web page created with C++ and Crow.</p></body></html>";
+    });
+
+    // Set the server to listen on port 8080
+    app.port(8080).multithreaded().run();
+}
+
+
+<!---
+Vostellaa001/Vostellaa001 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
